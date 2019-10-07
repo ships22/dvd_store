@@ -1,0 +1,24 @@
+<div class="main">
+  <h1>Dvd Shop</h1>
+  <nav>
+    <ul>
+      <li>
+        <a routerLink="/display" routerLinkActive="active">Home</a>
+      </li>
+
+      <li>
+        <a routerLink="/display" routerLinkActive="active">Checkout</a>
+      </li>
+
+      <li>
+        <a *ngIf="loginService.isLoggedIn()" routerLink="/productadmin" routerLinkActive="active">Admin</a>
+      </li>
+      <li>
+        <a *ngIf="!loginService.isLoggedIn()" routerLink="/login" routerLinkActive="active">Login</a>
+      </li>
+      <li>
+        <a *ngIf="loginService.isLoggedIn()" routerLink="/logout" routerLinkActive="active">Logout</a>
+      </li>
+    </ul>
+  </nav>
+</div>

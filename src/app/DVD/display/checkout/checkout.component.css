@@ -1,0 +1,56 @@
+.main {
+    height: 500px;
+    width: 100%;
+    position: relative;
+    background: white;
+}
+/* .description {
+    color: white;
+} */
+.main h3, .main h4{
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: auto;
+    background: black;
+    width: 100%;
+    position: absolute;
+}
+.main h3 {
+    top: 0;
+    z-index: 2;
+}
+.main h4 {
+    bottom: 0;
+}
+.cart_dvd {
+    height: 430px;
+    overflow: scroll;
+    padding-top: 50px;
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.description {
+    position: relative;
+}
+button {
+    color: white;
+    height: 30px;
+    background: rgb(117, 115, 228);
+    width: 80px;
+    border: 1px solid white;
+    border-radius: 3px;
+    margin: 10px;
+}
+button.cancel {
+    background: red;
+    position: absolute;
+    right: 8px;
+    top: -10px;
+    width: 15px;
+    height: 15px;
+}
+.total {
+    margin-bottom: 0;
+}

@@ -1,0 +1,23 @@
+<div class="main">
+    <h3 *ngIf="!cart.length > 0">
+        There is no item in the cart!
+    </h3>
+    <h3 *ngIf="cart.length > 0">
+        Added items
+    </h3>
+    <div class="cart_dvd">
+
+        <div class="item animated lightSpeedIn" *ngFor="let dvd of cart">
+            <section class="description">
+                <button class="cancel" (click)="cancelItem(dvd.id)">X</button>
+                <p>Name : {{ dvd.name }} </p>
+                <p>Qty :{{ dvd.qty}}</p>
+                <p>Category : {{ dvd.cat }}</p>
+                <p>Price : {{ dvd.price | currency }}</p>
+            </section>
+            <button (click)="addItem(dvd.id)">+</button>
+            <button (click)="removeItem(dvd.id)">-</button>
+        </div>
+    </div>
+    <h4 class="total">Total: {{ t }} </h4>
+</div>

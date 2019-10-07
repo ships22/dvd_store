@@ -1,0 +1,14 @@
+<div class="loginMain">
+    <h3>Login</h3>
+    <div class="credential">
+        <div class="inputGroup">
+            <label for="username">User name :</label>
+            <input type="text" name="username" [(ngModel)]="username" placeholder="email">
+        </div>
+        <div class="inputGroup">
+            <label for="password">Password :</label>
+            <input type="password" name="password" [(ngModel)]="password" placeholder="password">
+        </div>
+        <button (click)="checkLogin()">Login</button>
+    </div>
+</div>

@@ -1,0 +1,101 @@
+.mainDisplay {
+  background: hsl(262, 75%, 11%);
+  /* height: 550px; */
+  width: 95%;
+  margin: 10px auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  overflow: scroll;
+  justify-content: space-evenly;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.mainDisplay h2, .sCart h4 {
+  width: 100%;
+  color: rgb(68, 2, 112);
+  height: 50px;
+  background: white;
+  text-align: center;
+  line-height: 50px;
+}
+section.display {
+  width: 80%;
+  border: 2px solid white;
+  flex-wrap: wrap;
+  display: flex;
+  overflow: scroll;
+  justify-content: center;
+}
+.dvd {
+  border-radius: 5px;
+  margin: 10px;
+  padding: 5px;
+  height: 55%;
+  min-width: 180px;
+  color: white;
+  border: 2px solid rgb(226, 236, 88);
+}
+.coverPhoto {
+  background-image: url(../../../assets/image/terminator.jpg);
+  background-size: 100% 100%;
+  border: 2px solid white;
+  height: 50%;
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  padding-top: 20px;
+}
+.coverPhoto p {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 20px;
+}
+section.description {
+  padding: 10px;
+  position: relative;
+}
+section.description p {
+  font-size: 10px;
+  margin-left: 10px;
+}
+section.description p:nth-child(1) {
+  font-weight: bold;
+}
+button.add {
+  height: 35px;
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 5px;
+  background: rgb(83, 240, 193);
+  border: 2px solid white;
+}
+.added {
+  margin-top: 20px;
+  color: yellow;
+  position: absolute;
+  bottom: -20px;
+}
+.sCart {
+  height: 100%;
+  width: 220px;
+  border: 2px solid white;
+}
+.search_box {
+  background: white;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  margin-bottom: 10px;
+}
+.search_box select {
+  height: 40px;
+  width: 200px;
+  margin-left: 20px;
+  font-size: 18px;
+  border: 2px solid rgb(68, 2, 112);
+  outline: 0;
+}
+.search_box select:focus {
+  border: 2px solid rgb(164, 66, 230);
+}

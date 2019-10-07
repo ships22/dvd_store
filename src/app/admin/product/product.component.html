@@ -1,0 +1,60 @@
+<div class="main">
+  <h2 class="animated flash">Manage Dvd</h2>
+  <section class="products">
+    <section class="left">
+      <h3>In stock</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>Option</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let d of dvd">
+            <td>{{ d.name }}</td>
+            <td>{{ d.cat }}</td>
+            <td>{{ d.price | currency }}</td>
+            <td>{{ d.image }}</td>
+            <td>
+              <button (click)="editDvd(d.id)">Edit</button>
+              <button (click)="deleteDvd(d.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="right">
+      <h3>Add to stock</h3>
+      <form #f="ngForm" (ngSubmit)="submit(f)">
+        <div class="input_group">
+          <label for="name">Name : </label>
+          <input ngModel #name="ngModel" name="name" type="text" placeholder="Name" id="name" required minlength="3" maxlength="25"
+          />
+        </div>
+        <div class="input_group">
+          <label for="price">Price : </label>
+          <input ngModel #price="ngModel" name="price" type="number" placeholder="Price" id="price" required minlength="1" maxlength="4"
+          />
+        </div>
+        <div class="input_group">
+          <label for="cat">Category : </label>
+          <select ngModel name="cat" id="cat" required>
+            <option value=""></option>
+            <option *ngFor="let c of cat" [value]="c.id">{{ c.category }}
+            </option>
+          </select>
+        </div>
+        <div class="input_group">
+          <label for="image">Image : </label>
+          <input ngModel #image="ngModel" name="image" type="text" placeholder="image" id="image" required minlength="3" maxlength="25"
+          />
+        </div>
+        <button [disabled]="!f.valid">Submit</button>
+      </form>
+    </section>
+  </section>
+</div>

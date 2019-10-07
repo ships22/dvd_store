@@ -1,0 +1,93 @@
+/* div.main {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Raleway";
+} */
+div.main h2 {
+  color: white;
+  width: 100%;
+  text-align: center;
+  background: #2f0a33;
+  height: 50px;
+  line-height: 50px;
+  font-weight: 400;
+}
+section.products {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+}
+
+
+
+section.products .right {
+  
+  /* background: rgb(237, 240, 222); */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+}
+
+/* table thead {
+  background: rgb(19, 203, 228);
+}
+table thead th {
+  height: 40px;
+}
+tbody tr td {
+  padding: 8px;
+}
+tbody tr:nth-child(odd) {
+  background: rgb(125, 226, 240);
+} */
+
+button {
+  background: #1d0620;
+  color: white;
+  height: 30px;
+  width: 80px;
+}
+button:nth-child(2) {
+  background: rgb(156, 3, 3);
+}
+section.right {
+  padding: 10px;
+  font-family: "Raleway";
+}
+section.right .input_group {
+  height: 50px;
+  background: #2f0a33;
+  margin-top: 10px;
+  border-left: 10px solid #6a1f72;
+  padding-right: 10px;
+}
+section.right .input_group label {
+  float: left;
+  margin: 15px;
+  color: white;
+  font-weight: 100;
+}
+section.right .input_group input {
+  width: 70%;
+  height: 35px;
+  margin-top: 8px;
+  float: right;
+  padding-left : 10px;
+}
+section.right .input_group select {
+  width: 70%;
+  height: 35px;
+  margin-top: 8px;
+  float: right;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+}
+section.right button {
+  margin-top: 50px;
+  width: 150px;
+  height: 45px;
+  font-size: 18px;
+}

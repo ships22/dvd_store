@@ -1,0 +1,33 @@
+<div class="main">
+    <h2 class="animated flash">Manage Dvd</h2>
+
+    <section class="right">
+        <h3>Edit dvd</h3>
+        <form #f="ngForm" (ngSubmit)="submit(dvd)" *ngIf="dvd">
+            <div class="input_group">
+                <label for="name">Name : </label>
+                <input [(ngModel)]="dvd.name" #name="ngModel" name="dvd.name" type="text" id="name" required minlength="3" maxlength="25"
+                />
+            </div>
+            <div class="input_group">
+                <label for="price">Price : </label>
+                <input [(ngModel)]="dvd.price" #price="ngModel" name="price" type="number" id="price" required minlength="1" maxlength="4"
+                />
+            </div>
+            <div class="input_group">
+                <label for="cat">Category : </label>
+                <select [(ngModel)]="dvd.cat" name="cat" id="cat" required>
+                    <option value=""></option>
+                    <option *ngFor="let c of cat" [value]="c.id">{{ c.category }}
+                    </option>
+                </select>
+            </div>
+            <div class="input_group">
+                <label for="image">Image : </label>
+                <input [(ngModel)]="dvd.image" #image="ngModel" name="image" type="text" id="image" required minlength="3" maxlength="25"
+                />
+            </div>
+            <button [disabled]="!f.valid">Submit</button>
+        </form>
+    </section>
+</div>

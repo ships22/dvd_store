@@ -1,0 +1,40 @@
+div.main {
+  background: #8a3194;
+  display: flex;
+  align-items: center;
+  height: 100px;
+  flex-direction: column;
+}
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 10px;
+  color: white;
+}
+nav {
+  background: #5e1866;
+  color: white;
+  width: 100%;
+  height: 42px;
+  align-self: flex-end;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  line-height: 42px;
+}
+nav ul li {
+  border: 1px solid #e6bdeb;
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+  height: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+nav ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+}

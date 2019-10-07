@@ -1,0 +1,29 @@
+<div class="mainDisplay">
+  <div class="search_box">
+    <label for="cat">Category : </label>
+    <select [(ngModel)]="cat" (change)="filter(cat)" name="cat" id="cat" required>
+      <option value="">ALL CATEGORIES</option>
+      <option *ngFor="let c of category" [ngValue]="c.category">{{ c.category }}
+      </option>
+    </select>
+  </div>
+  <section class="sCart">
+    <h4>Shopping cart</h4>
+    <app-checkout></app-checkout>
+  </section>
+  <section class="display" *ngIf="dvds">
+    <h2 class="animated flash">Dvd display</h2>
+    <div class="dvd animated fadeIn" *ngFor="let dvd of dvdDisplay">
+      <div class="coverPhoto">
+        {{ dvd.image }}
+      </div>
+      <section class="description">
+        <p>Name : {{ dvd.name }}</p>
+        <p>Category : {{ dvd.cat }}</p>
+        <p>Price : {{ dvd.price | currency }}</p>
+        <button class="add" (click)="addToCart(dvd)">Add to cart</button>
+        <p class="added animated flash" *ngIf="dvd.added">Item added</p>
+      </section>
+    </div>
+  </section>
+</div>

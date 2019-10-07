@@ -1,0 +1,32 @@
+<div class="main">
+  <section class="inStock">
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Mange</th>
+          <th>{{c}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let dvd of cart">
+          <td>{{ dvd.id }}</td>
+          <td>{{ dvd.name }}</td>
+          <td>{{ dvd.cat }}</td>
+          <td>{{ dvd.price }}</td>
+          <td>
+            <button (click)="editDvd(dvd.id)">
+              Edit
+            </button>
+            <button>
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+</div>
